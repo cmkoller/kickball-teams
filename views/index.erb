@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kickball Teams</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+  <div id="wrapper">
+    <h1>Kickball Teams</h1>
+
+    <div class="view_links">
+      <h3>View by Team</h3>
+      <ul>
+        <% @teams.each do |team| %>
+          <li><a href=<%= "/team/#{team.gsub(" ", "_")}" %>><%= team %></a></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="view_links">
+      <h3>View by Position</h3>
+      <ul>
+        <% @positions.each do |pos| %>
+          <li><a href=<%= "/position/#{pos.gsub(" ", "_")}" %>><%= pos %></a></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

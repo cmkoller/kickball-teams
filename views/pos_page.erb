@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kickball Teams</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+  <div id="wrapper">
+
+    <h1><%= "#{@pos_name} Players" %></h1>
+
+    <ul>
+      <% @players.each do |name, team| %>
+        <li><%= "#{name}, #{team}" %></li>
+      <% end %>
+    </ul>
+
+    <a id="go_back" href="/"><-- Go back</a>
+  </div>
+  </body>
+</html>
